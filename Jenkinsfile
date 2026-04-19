@@ -67,7 +67,7 @@ pipeline {
 
     stage("deploy 2026Q1 on c1"){
          agent {
-          label "slave-1"
+          label  "slave-1"
          }
     steps{
              sh'''
