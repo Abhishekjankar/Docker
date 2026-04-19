@@ -1,7 +1,9 @@
 pipeline {
 
 
-     agent any
+     agent {
+          label "
+     }
 
        environment {
            REPO_URL = "https://github.com/Abhishekjankar/Docker.git"
@@ -64,7 +66,9 @@ pipeline {
 
 
     stage("deploy 2026Q1 on c1"){
-
+         agent {
+          label "slave-1"
+         }
     steps{
              sh'''
 
