@@ -9,7 +9,7 @@ pipeline{
 
     stages {
 
-       stage{"deploying on slave-1"){
+       stage("deploying on slave-1"){
 
                agent{
                     label "slave-1"
