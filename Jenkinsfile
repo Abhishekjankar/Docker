@@ -23,7 +23,7 @@ pipeline {
 
             steps{
                 dir("/mnt/Q1"){
-                   git barnch: "2026Q1", url:"${REPO_URL}"
+                   git branch: "2026Q1", url:"${REPO_URL}"
 
 }
 
