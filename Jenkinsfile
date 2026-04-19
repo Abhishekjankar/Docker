@@ -1,9 +1,7 @@
 pipeline {
 
 
-     agent {
-          label any
-     }
+     agent any
 
        environment {
            REPO_URL = "https://github.com/Abhishekjankar/Docker.git"
