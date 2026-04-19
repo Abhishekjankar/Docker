@@ -91,7 +91,7 @@ pipeline {
  
                docker rm -f c2 || true
                docker run -dp 90:80 --name c2 httpd
-               docker cp /mnt/Q2/index.html c1:/usr/local/apache2/htdocs/
+               docker cp /mnt/Q2/index.html c2:/usr/local/apache2/htdocs/
                docker exec c1 chmod -R 777 /usr/local/apache2/htdocs/index.html
                 '''
 
@@ -106,7 +106,7 @@ pipeline {
 
                docker rm -f c3 || true
                docker run -dp 8081:80 --name c3 httpd
-               docker cp /mnt/Q3/index.html c1:/usr/local/apache2/htdocs/
+               docker cp /mnt/Q3/index.html c3:/usr/local/apache2/htdocs/
                docker exec c1 chmod -R 777 /usr/local/apache2/htdocs/index.html
                 '''
 
