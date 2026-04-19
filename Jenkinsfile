@@ -2,7 +2,7 @@ pipeline {
 
 
      agent {
-          label "built-in"
+          label any
      }
 
        environment {
@@ -20,20 +20,7 @@ pipeline {
 
 }
 
-        stage("clone 2026Q1"){
-
-
-            steps{
-                dir("/mnt/Q1"){
-                   git branch: "2026Q1", url:"${REPO_URL}"
-
-}
-
-
-}
-
-
-}     
+    
 
        stage("clone 2026Q2"){
 
@@ -69,7 +56,12 @@ pipeline {
          agent {
           label  "slave-1"
          }
+         
     steps{
+         dir("/mnt/Q1"){
+
+                     git branch: "2026Q1", url:"${REPO_URL}"
+}
              sh'''
 
                sudo  docker rm -f c1 || true
