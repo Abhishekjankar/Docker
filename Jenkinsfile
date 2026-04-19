@@ -72,10 +72,10 @@ pipeline {
     steps{
              sh'''
 
-                docker rm -f c1 || true
-                docker run -dp 80:80 --name c1 httpd
-               docker cp /mnt/Q1/index.html c1:/usr/local/apache2/htdocs/
-               docker exec c1 chmod -R 777 /usr/local/apache2/htdocs/index.html
+               sudo  docker rm -f c1 || true
+                sudo docker run -dp 80:80 --name c1 httpd
+               sudo docker cp /mnt/Q1/index.html c1:/usr/local/apache2/htdocs/
+             sudo docker exec c1 chmod -R 777 /usr/local/apache2/htdocs/index.html
               
              '''
 
